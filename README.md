@@ -1,16 +1,30 @@
-# React + Vite
+# Modern React Task Manager 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
+This is a high-performance, responsive To-Do application built with **React** and **Vite**. The project demonstrates the implementation of modern web development patterns, focusing on component-based architecture, persistent data storage, and dynamic user interfaces.
 
-Currently, two official plugins are available:
+## ✨ Key Features
+* **Persistent Data:** Leverages the **Web Storage API (LocalStorage)** to ensure tasks are saved even after page refreshes.
+* **Dynamic Progress Tracking:** Features a real-time progress bar that calculates the percentage of completed tasks.
+* **Inline Task Editing:** Users can modify existing tasks directly within the list without opening separate modals.
+* **Advanced Filtering:** Toggle between 'All', 'Active', and 'Completed' views using state-based filtering logic.
+* **Responsive Dark Theme:** A sleek, mobile-friendly dark interface designed with optimized CSS for better readability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+* **Frontend Library:** React.js (Functional Components & Hooks).
+* **Build Tool:** Vite (for ultra-fast development and bundling).
+* **Styling:** Modern CSS-in-JS (Inline styling for dynamic property management).
 
-## React Compiler
+## 🧠 Technical Deep Dive
+### State Management
+The application utilizes the `useState` hook to manage the lifecycle of tasks, filtering states, and editing modes. By using **Lazy Initialization** for the initial state, the app optimizes performance by reading from LocalStorage only once during the initial mount.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Side Effects & Persistence
+The `useEffect` hook is implemented to synchronize the application state with the browser's LocalStorage whenever the task list is modified, ensuring a seamless user experience across sessions.
+
+## ⚙️ Installation & Setup
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Emirhan-codee/React-Task-Manager.git](https://github.com/Emirhan-codee/React-Task-Manager.git)
